@@ -5,6 +5,7 @@ import countries from "../APIs/countries";
 import covid from "../APIs/covid";
 import spaceX from "../APIs/spaceX";
 
+import Search from './search'
 import "./mainFunctional.styles.css";
 
 function MainFunctional() {
@@ -30,26 +31,11 @@ function MainFunctional() {
 
   return (
     <div className="App">
-      <div className="search_container">
-        <input className="search_bar" />
-        <button type="submit" className="search_button">
-          Search
-        </button>
-      </div>
-      <div className="content_container">
-        {data.map((item, index) => {
-          return (
-            <div className="user_card" key={index}>
-              {" "}
-              <h3 className="user_name">
-                name: {item.name.first} {item.name.last}
-              </h3>
-            </div>
-          );
-        })}
-      </div>
+    <Search data={data} />
     </div>
   );
 }
 
 export default MainFunctional;
+
+
