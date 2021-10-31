@@ -19,8 +19,8 @@ setQuery(searchInput)
   return (
     <div className="search_container">
       <div className="search_bar">
-      <h3>Search Team by First Name</h3>
-        <input type='text' onChange={(e) => searchData(e.target.value)}  className="search_bar" placeholder='Enter First Name' />
+      <h3>Search Team by Name</h3>
+        <input type='text' onChange={(e) => searchData(e.target.value)}  className="search_bar" placeholder='Enter  Name' />
         </div>
           <div className="content_container">
          {
